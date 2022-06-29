@@ -28,3 +28,7 @@ C:\Users\USER\source\repos\G_API\G_API\obj\Debug\net5.0\ref\G_API.dll
 C:\Users\USER\source\repos\G_API\G_API\obj\Debug\net5.0\G_API.pdb
 C:\Users\USER\source\repos\G_API\G_API\obj\Debug\net5.0\G_API.genruntimeconfig.cache
 C:\Users\USER\source\repos\G_API\G_API\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\USER\source\repos\G_API\G_API\bin\Debug\net5.0\System.Threading.Channels.dll
+C:\Users\USER\source\repos\G_API\G_API\bin\Debug\net5.0\Telegram.Bot.dll
+C:\Users\USER\source\repos\G_API\G_API\bin\Debug\net5.0\Telegram.Bot.Extensions.Polling.dll
+C:\Users\USER\source\repos\G_API\G_API\bin\Debug\net5.0\users.json

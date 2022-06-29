@@ -5,28 +5,6 @@ using System.Threading.Tasks;
 
 namespace G_API.Models
 {
-    /*
-      [
-   {
-      "id":33984,
-      "title":"Karn Evil 9 Part 2",
-      "artist":{
-         "id":2149,
-         "name":"Emerson, Lake & Palmer"
-      },
-      "chordsPresent":false,
-   },
-   {
-      "id":407134,
-      "title":"Karn doen thang",
-      "artist":{
-         "id":54714,
-         "name":"การเดินทาง"
-      },
-      "chordsPresent":false,
-   }
-]
-     */
     public class SongsterSong
     {
         public int ID { get; set; }

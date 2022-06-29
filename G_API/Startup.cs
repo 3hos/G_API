@@ -1,4 +1,5 @@
 using G_API.Clients;
+using G_API.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,7 +28,11 @@ namespace G_API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<USERS>();
+            services.AddSingleton<SongDBClient>();
             services.AddSingleton<SongsterClient>();
+            services.AddSingleton<ChordsClient>();
+            services.AddSingleton<SpotifyClient>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

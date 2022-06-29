@@ -1,11 +1,7 @@
+using G_API.Models;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace G_API
 {
@@ -13,6 +9,8 @@ namespace G_API
     {
         public static void Main(string[] args)
         {
+            USERS.ListOfLast = new Dictionary<string, List<SongResponse>>();
+            USERS.Open();
             CreateHostBuilder(args).Build().Run();
         }
 
