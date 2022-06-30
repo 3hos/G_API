@@ -46,6 +46,16 @@ namespace G_API.Clients
         {
             var responce = await _client.GetAsync($"recommendations?limit={limit}&market=UA&seed_artists={artists}&seed_genres={genres}&seed_tracks={tracks}");
             responce.EnsureSuccessStatusCode();
+            if (!responce.IsSuccessStatusCode)
+            {
+                try
+                {
+                    _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", GetAccessToken());
+                    responce = await _client.GetAsync($"recommendations?limit={limit}&market=UA&seed_artists={artists}&seed_genres={genres}&seed_tracks={tracks}");
+                    responce.EnsureSuccessStatusCode();
+                }
+                catch { }
+            }
             var content = responce.Content.ReadAsStringAsync().Result;
             var res = JsonConvert.DeserializeObject<Models.SpotyRecks>(content);
             return res.Tracks;
