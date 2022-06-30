@@ -23,14 +23,18 @@ namespace G_API.Clients
         }
         public async Task<string> GetSong(string artist, string song)
         {
-            var responce = await _client.GetAsync($"searchtrack.php?s={artist}&t={song}");
-            responce.EnsureSuccessStatusCode();
+            try
+            {
+                var responce = await _client.GetAsync($"searchtrack.php?s={artist}&t={song}");
+                responce.EnsureSuccessStatusCode();
 
-            var content = responce.Content.ReadAsStringAsync().Result;
-            var res = JsonConvert.DeserializeObject<DBResponse>(content);
-            string genre = "Unknown";
-            if (res.track!=null) if(res.track[0].StrGenre!=null) genre = res.track[0].StrGenre;
-            return genre;
+                var content = responce.Content.ReadAsStringAsync().Result;
+                var res = JsonConvert.DeserializeObject<DBResponse>(content);
+                string genre = "Unknown";
+                if (res.track != null) if (res.track[0].StrGenre != null) genre = res.track[0].StrGenre;
+                return genre;
+            }
+            catch { return "Unknown"; }
         }
     }
 }
