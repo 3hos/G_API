@@ -10,7 +10,6 @@ namespace G_API
         public static void Main(string[] args)
         {
             USERS.ListOfLast = new Dictionary<string, List<SongResponse>>();
-            USERS.Open();
             CreateHostBuilder(args).Build().Run();
         }
 

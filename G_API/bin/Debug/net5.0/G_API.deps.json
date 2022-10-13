@@ -33,6 +33,7 @@
     ".NETCoreApp,Version=v5.0": {
       "G_API/1.0.0": {
         "dependencies": {
+          "AWSSDK.DynamoDBv2": "3.7.5.14",
           "Newtonsoft.Json": "13.0.1",
           "Swashbuckle.AspNetCore": "5.6.3",
           "Telegram.Bot": "17.0.0",
@@ -325,6 +326,31 @@
         },
         "compile": {
           "G_API.dll": {}
+        }
+      },
+      "AWSSDK.Core/3.7.13.18": {
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.13.18"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/AWSSDK.Core.dll": {}
+        }
+      },
+      "AWSSDK.DynamoDBv2/3.7.5.14": {
+        "dependencies": {
+          "AWSSDK.Core": "3.7.13.18"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/AWSSDK.DynamoDBv2.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.7.5.14"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/AWSSDK.DynamoDBv2.dll": {}
         }
       },
       "Microsoft.Extensions.ApiDescription.Server/3.0.0": {},
@@ -2136,6 +2162,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AWSSDK.Core/3.7.13.18": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QGXw5QL10f3inaBT7whFRu8eW5vF/OCoqh2CAgvPMJn0TQ2P3jv+PN3mVnaMIowwBxF2y8OdQI8SlAle8HyBFw==",
+      "path": "awssdk.core/3.7.13.18",
+      "hashPath": "awssdk.core.3.7.13.18.nupkg.sha512"
+    },
+    "AWSSDK.DynamoDBv2/3.7.5.14": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WJ5OOkQvQkczpXNopRf4RJZBtXT1Dx14TygH0Q6uBOt/i3ibe1XXR57fUZOjNnl95bNpmSSCHB5o20f/Dn0BMw==",
+      "path": "awssdk.dynamodbv2/3.7.5.14",
+      "hashPath": "awssdk.dynamodbv2.3.7.5.14.nupkg.sha512"
     },
     "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
       "type": "package",

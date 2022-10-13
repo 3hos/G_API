@@ -32,3 +32,5 @@ C:\Users\USER\source\repos\G_API\G_API\bin\Debug\net5.0\System.Threading.Channel
 C:\Users\USER\source\repos\G_API\G_API\bin\Debug\net5.0\Telegram.Bot.dll
 C:\Users\USER\source\repos\G_API\G_API\bin\Debug\net5.0\Telegram.Bot.Extensions.Polling.dll
 C:\Users\USER\source\repos\G_API\G_API\bin\Debug\net5.0\users.json
+C:\Users\USER\source\repos\G_API\G_API\bin\Debug\net5.0\AWSSDK.Core.dll
+C:\Users\USER\source\repos\G_API\G_API\bin\Debug\net5.0\AWSSDK.DynamoDBv2.dll

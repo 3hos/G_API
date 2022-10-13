@@ -13,14 +13,19 @@ namespace G_API.Models
             ArtistName = artistName;
             URL = uRL;
         }
+        public SongResponse() {}
 
         public string Title { get; set; }
         public string ArtistName { get; set; }
         public string URL { get; set; }
-        public List<string> genres { get; set; }
         public string genre { get; set; }
         public string difficulty { get; set; }
         public string YoutubeURL { get; set; }
 
+    }
+    public class UserSongs
+    {
+        public string ID { get; set; }
+        public List<SongResponse> Songs { get; set; }
     }
 }
