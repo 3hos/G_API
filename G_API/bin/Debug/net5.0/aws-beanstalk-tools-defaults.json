@@ -1,0 +1,20 @@
+
+{
+    "region" : "eu-west-2",
+    "configuration" : "Debug",
+    "framework"     : "net5.0",
+    "self-contained" : false,
+    "application"    : "GAPI",
+    "environment"    : "GAPI-dev",
+    "enable-xray"    : false,
+    "enhanced-health-type" : "basic",
+    "additional-options"   : "\"aws:autoscaling:launchconfiguration,SecurityGroups\"=\"sg-05b89474a2c18ae9b\";\"aws:ec2:vpc,Subnets\"=\"subnet-0a64974901c2876c6\"",
+    "solution-stack"       : "64bit Amazon Linux 2 v2.4.0 running .NET Core",
+    "environment-type"     : "SingleInstance",
+    "cname"                : "gapi-dev",
+    "instance-type"        : "t3a.medium",
+    "key-pair"             : "G_API",
+    "instance-profile"     : "aws-elasticbeanstalk-ec2-role",
+    "service-role"         : "aws-elasticbeanstalk-service-role",
+    "proxy-server"         : "nginx"
+}

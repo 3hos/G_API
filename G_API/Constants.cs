@@ -15,7 +15,7 @@ namespace G_API
         public static string adressSpotify = "https://api.spotify.com/v1/";
         public static string SpotyClientID = "0956e9d19657409b89d3b7aaf76690d3";
 
-        public static string SpotySecret = Environment.GetEnvironmentVariable("SpotySecret",EnvironmentVariableTarget.Machine);
+        public static string SpotySecret = "9286606523f64ec49b85e7bbde62693a";
 
         public static string DB_ID = "AKIA2N4FKUFKYHXI6BUQ";
         public static string DB_Secret = "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";
