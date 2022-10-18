@@ -1,9 +1,9 @@
-﻿using System;
+﻿using G_API.Models;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using G_API.Models;
-using Newtonsoft.Json;
 
 
 namespace G_API.Clients
@@ -12,7 +12,7 @@ namespace G_API.Clients
     {
         private HttpClient _client;
         private static string _adress;
-        
+
         public SongsterClient()
         {
             _adress = Constants.adressSongster;

@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -27,7 +26,6 @@ namespace G_API.Clients
         }
         public async Task<Models.Items> GetSong(string song)
         {
-            _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", GetAccessToken());
             var responce = await _client.GetAsync($"search?q={song}&type=track&limit=5&include_external=true");
             responce.EnsureSuccessStatusCode();
             var content = responce.Content.ReadAsStringAsync().Result;
@@ -43,21 +41,10 @@ namespace G_API.Clients
             var result = JsonConvert.DeserializeObject<Models.Artists>(content);
             return result.genres;
         }
-        public async Task<List<Models.Items>> GetRecommendations(string artists,string genres,string tracks, int limit=5)
+        public async Task<List<Models.Items>> GetRecommendations(string artists, string genres, string tracks, int limit = 5)
         {
-            _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", GetAccessToken());
             var responce = await _client.GetAsync($"recommendations?limit={limit}&market=UA&seed_artists={artists}&seed_genres={genres}&seed_tracks={tracks}");
             responce.EnsureSuccessStatusCode();
-            if (!responce.IsSuccessStatusCode)
-            {
-                try
-                {
-                    _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", GetAccessToken());
-                    responce = await _client.GetAsync($"recommendations?limit={limit}&market=UA&seed_artists={artists}&seed_genres={genres}&seed_tracks={tracks}");
-                    responce.EnsureSuccessStatusCode();
-                }
-                catch { }
-            }
             var content = responce.Content.ReadAsStringAsync().Result;
             var res = JsonConvert.DeserializeObject<Models.SpotyRecks>(content);
             return res.Tracks;
@@ -81,7 +68,7 @@ namespace G_API.Clients
             webRequest.Headers.Add("Authorization: Basic " + encode_clientid_clientsecret);
 
             var request = ("grant_type=client_credentials");
-            byte[] req_bytes = Encoding.ASCII.GetBytes(request); 
+            byte[] req_bytes = Encoding.ASCII.GetBytes(request);
             webRequest.ContentLength = req_bytes.Length;
 
             Stream strm = webRequest.GetRequestStream();

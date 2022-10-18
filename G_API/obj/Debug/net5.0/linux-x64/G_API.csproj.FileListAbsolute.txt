@@ -1,6 +1,5 @@
 C:\Users\USER\source\repos\G_API\G_API\bin\Debug\net5.0\linux-x64\appsettings.Development.json
 C:\Users\USER\source\repos\G_API\G_API\bin\Debug\net5.0\linux-x64\appsettings.json
-C:\Users\USER\source\repos\G_API\G_API\bin\Debug\net5.0\linux-x64\users.json
 C:\Users\USER\source\repos\G_API\G_API\bin\Debug\net5.0\linux-x64\G_API
 C:\Users\USER\source\repos\G_API\G_API\bin\Debug\net5.0\linux-x64\G_API.deps.json
 C:\Users\USER\source\repos\G_API\G_API\bin\Debug\net5.0\linux-x64\G_API.runtimeconfig.json
@@ -33,3 +32,4 @@ C:\Users\USER\source\repos\G_API\G_API\obj\Debug\net5.0\linux-x64\refint\G_API.d
 C:\Users\USER\source\repos\G_API\G_API\obj\Debug\net5.0\linux-x64\G_API.pdb
 C:\Users\USER\source\repos\G_API\G_API\obj\Debug\net5.0\linux-x64\G_API.genruntimeconfig.cache
 C:\Users\USER\source\repos\G_API\G_API\obj\Debug\net5.0\linux-x64\ref\G_API.dll
+C:\Users\USER\source\repos\G_API\G_API\bin\Debug\net5.0\linux-x64\aws-beanstalk-tools-defaults.json

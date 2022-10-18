@@ -1,5 +1,4 @@
 ﻿
-using Amazon.DynamoDBv2;
 using Amazon.DynamoDBv2.Model;
 using G_API.Clients;
 using G_API.DB;
@@ -50,8 +49,8 @@ namespace G_API.Controllers
                 }
                 catch { }
             }
-                if (!USERS.ListOfLast.ContainsKey(user)) USERS.ListOfLast.Add(user, new List<SongResponse>());
-                USERS.ListOfLast[user] = response;
+            if (!USERS.ListOfLast.ContainsKey(user)) USERS.ListOfLast.Add(user, new List<SongResponse>());
+            USERS.ListOfLast[user] = response;
             return response;
         }
         [HttpGet("favorites")]
@@ -76,7 +75,7 @@ namespace G_API.Controllers
         public async Task DellFromFavAsync(string user, int number)
         {
             var resp = await _dBClient.DelFromFav(user, number);
-            if(!resp) throw new InternalServerErrorException("Failed to delete");
+            if (!resp) throw new InternalServerErrorException("Failed to delete");
         }
         [HttpGet("chord")]
         public async Task<List<ChordResponse>> GetChord(string chord)
@@ -115,4 +114,3 @@ namespace G_API.Controllers
         }
     }
 }
- 

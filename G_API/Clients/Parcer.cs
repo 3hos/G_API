@@ -1,16 +1,15 @@
-﻿using System.Net;
-using System.IO;
+﻿using System.IO;
+using System.Net;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
-namespace G_API
+namespace G_API.Clients
 {
     public class Parcer
     {
         static string GetHtmlPage(string url)
         {
             var HtmlText = string.Empty;
-            HttpWebRequest myHttwebrequest = (HttpWebRequest)HttpWebRequest.Create(url);
+            HttpWebRequest myHttwebrequest = (HttpWebRequest)WebRequest.Create(url);
             HttpWebResponse myHttpWebresponse = (HttpWebResponse)myHttwebrequest.GetResponse();
             StreamReader strm = new StreamReader(myHttpWebresponse.GetResponseStream());
             HtmlText = strm.ReadToEnd();
@@ -18,7 +17,7 @@ namespace G_API
         }
         static string ParDificulty(string HtmlText)
         {
-            string HtmlDif = HtmlText; 
+            string HtmlDif = HtmlText;
             string patternImg = @"<span id=.track-difficulty. (.*) (.*) title=.(.*) Tier .";
             string pattern = @"title=.(.*) Tier .";
             MatchCollection matches = Regex.Matches(HtmlDif, patternImg, RegexOptions.IgnoreCase);
@@ -26,7 +25,7 @@ namespace G_API
             {
                 var match = matches[0].ToString();
                 matches = Regex.Matches(match, pattern, RegexOptions.IgnoreCase);
-                return matches[0].ToString().Replace("title=\"","");
+                return matches[0].ToString().Replace("title=\"", "");
             }
             else return null;
         }

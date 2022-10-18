@@ -1,9 +1,7 @@
 ﻿using Amazon.DynamoDBv2;
 using Amazon.DynamoDBv2.Model;
 using G_API.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace G_API.DB
@@ -45,7 +43,7 @@ namespace G_API.DB
             var item = new Dictionary<string, AttributeValue>
             {
                 ["ID"] = new AttributeValue { S = user },
-                ["Songs"] = new AttributeValue { L = new List<AttributeValue>(),IsLSet = true},
+                ["Songs"] = new AttributeValue { L = new List<AttributeValue>(), IsLSet = true },
             };
 
             var request = new PutItemRequest
@@ -61,7 +59,7 @@ namespace G_API.DB
         {
             var key = new Dictionary<string, AttributeValue>
             {
-                ["ID"] = new AttributeValue { S = user},
+                ["ID"] = new AttributeValue { S = user },
             };
 
             var updates = new Dictionary<string, AttributeValueUpdate>
@@ -69,8 +67,8 @@ namespace G_API.DB
                 ["Songs"] = new AttributeValueUpdate
                 {
                     Action = AttributeAction.ADD,
-                    Value = new AttributeValue 
-                    { 
+                    Value = new AttributeValue
+                    {
                         L = new List<AttributeValue>
                         {   new AttributeValue {M = ToClas.ToM(song)}   }
                     }

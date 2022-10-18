@@ -1,15 +1,15 @@
+using Amazon;
+using Amazon.DynamoDBv2;
+using Amazon.DynamoDBv2.DataModel;
+using Amazon.Runtime;
 using G_API.Clients;
+using G_API.DB;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using Amazon.DynamoDBv2;
-using Amazon.Runtime;
-using Amazon;
-using Amazon.DynamoDBv2.DataModel;
-using G_API.DB;
 
 namespace G_API
 {
@@ -28,8 +28,10 @@ namespace G_API
             services.AddSingleton<SongDBClient>();
             services.AddSingleton<SongsterClient>();
             services.AddSingleton<ChordsClient>();
-            services.AddSingleton<SpotifyClient>();
             services.AddSingleton<DBClient>();
+
+            services.AddScoped<SpotifyClient>();
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

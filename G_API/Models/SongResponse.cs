@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace G_API.Models
 {
@@ -13,7 +10,7 @@ namespace G_API.Models
             ArtistName = artistName;
             URL = uRL;
         }
-        public SongResponse() {}
+        public SongResponse() { }
 
         public string Title { get; set; }
         public string ArtistName { get; set; }

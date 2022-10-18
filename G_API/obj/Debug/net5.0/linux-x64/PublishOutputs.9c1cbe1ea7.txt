@@ -1,7 +1,7 @@
 C:\Users\USER\source\repos\G_API\G_API\bin\Debug\net5.0\publish\G_API
 C:\Users\USER\source\repos\G_API\G_API\bin\Debug\net5.0\publish\appsettings.Development.json
 C:\Users\USER\source\repos\G_API\G_API\bin\Debug\net5.0\publish\appsettings.json
-C:\Users\USER\source\repos\G_API\G_API\bin\Debug\net5.0\publish\users.json
+C:\Users\USER\source\repos\G_API\G_API\bin\Debug\net5.0\publish\aws-beanstalk-tools-defaults.json
 C:\Users\USER\source\repos\G_API\G_API\bin\Debug\net5.0\publish\G_API.dll
 C:\Users\USER\source\repos\G_API\G_API\bin\Debug\net5.0\publish\G_API.deps.json
 C:\Users\USER\source\repos\G_API\G_API\bin\Debug\net5.0\publish\G_API.runtimeconfig.json
